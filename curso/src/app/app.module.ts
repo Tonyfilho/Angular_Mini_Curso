@@ -7,12 +7,16 @@ import { MainComponent } from './main/main.component';
 import { PipeComponent } from './main/pipe/pipe-comuns/pipe.component';
 import { PipeCustomsComponent } from './main/pipe/pipe-customs/pipe-customs.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     PipeComponent,
-    PipeCustomsComponent
+    PipeCustomsComponent,
+   
+   
   ],
   imports: [
     BrowserModule,
