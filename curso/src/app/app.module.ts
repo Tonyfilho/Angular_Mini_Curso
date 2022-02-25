@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { PipeComponent } from './main/pipe/pipe-comuns/pipe.component';
 import { PipeCustomsComponent } from './main/pipe/pipe-customs/pipe-customs.component';
+import { CustomPipe } from './main/pipe/pipe-customs/custom.pipe';
 
 
 
@@ -15,6 +16,7 @@ import { PipeCustomsComponent } from './main/pipe/pipe-customs/pipe-customs.comp
     MainComponent,
     PipeComponent,
     PipeCustomsComponent,
+    CustomPipe,
    
    
   ],

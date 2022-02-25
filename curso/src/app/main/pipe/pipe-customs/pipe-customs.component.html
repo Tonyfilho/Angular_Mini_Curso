@@ -20,7 +20,7 @@
         <td>{{ user.city | lowercase }}</td>        
         <td>{{ user.salary | currency: 'EU ' : 'symbol' }}</td>        
         <td>{{ user.age | date : 'dd-MM-YYYY' }}</td>        
-        <td>{{ user.age  }}</td>        
+        <td>{{ user.age | custom }}</td>        
                 
       </tr>   
     </tbody>
