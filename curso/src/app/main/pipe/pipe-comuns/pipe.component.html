@@ -1,0 +1,29 @@
+<h2>{{ 'pipes & pipes customs' | titlecase}} </h2>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">City</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of localUsers ; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ user.id | number }}</td>        
+        <td>{{ user.name | uppercase }}</td>        
+        <td>{{ user.city | lowercase }}</td>        
+        <td>{{ user.salary | currency: 'EU ' : 'symbol' }}</td>        
+        <td>{{ user.age | date : 'dd-MM-YYYY' }}</td>        
+                
+      </tr>   
+    </tbody>
+  </table>
+
+  <!-- Exemplo do PIPE JSON -->
+  <pre>
+      {{ localUsers | json }}
+  </pre>
