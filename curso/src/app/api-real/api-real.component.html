@@ -1,0 +1,23 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">City</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of localUsers ; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ user.userId }}</td>        
+        <td>{{ user.id  }}</td>        
+        <td>{{ user.title  }}</td>        
+        <td>{{ user.completed }}</td>        
+            
+                
+      </tr>   
+    </tbody>
+  </table>

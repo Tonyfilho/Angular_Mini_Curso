@@ -7,6 +7,8 @@ import { MainComponent } from './main/main.component';
 import { PipeComponent } from './main/pipe/pipe-comuns/pipe.component';
 import { PipeCustomsComponent } from './main/pipe/pipe-customs/pipe-customs.component';
 import { CustomPipe } from './main/pipe/pipe-customs/custom.pipe';
+import { ApiRealComponent } from './api-real/api-real.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -17,12 +19,14 @@ import { CustomPipe } from './main/pipe/pipe-customs/custom.pipe';
     PipeComponent,
     PipeCustomsComponent,
     CustomPipe,
+    ApiRealComponent,
    
    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
