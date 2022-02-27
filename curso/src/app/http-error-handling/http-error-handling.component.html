@@ -1,1 +1,37 @@
-<p>http-error-handling works!</p>
+<div class="container" *ngIf="localUser.length > 0 ; else templateErro">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Website</th>
+        <th scope="col">Street</th>
+        <th scope="col">City</th>
+        <th scope="col">Zipcode</th>
+        <th scope="col">Suite</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of localUser; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ user?.id }}</td>        
+        <td>{{ user?.name  }}</td>        
+        <td>{{ user?.website  }}</td>        
+        <td>{{ user?.address?.street }}</td>        
+        <td>{{ user?.address?.city }}</td>        
+        <td>{{ user?.address?.zipcode }}</td>        
+        <td>{{ user?.address?.suite }}</td>        
+            
+                
+      </tr>   
+    </tbody>
+  </table>
+</div>
+<ng-template #templateErro >
+    <div class="alert-danger text-center">
+      <span> 
+        {{ localError }}
+      </span> 
+    </div>
+</ng-template>
