@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {  HttpClient, HttpClientModule } from '@angular/common/http'
+import {  HttpClient } from '@angular/common/http'
 
 @Injectable({
   providedIn: 'root'
@@ -11,5 +11,10 @@ export class ApiService {
 
   getAll(){
    return this.http.get('https://jsonplaceholder.typicode.com/todos');
+  }
+
+  getAllUsers(){
+    const users = this.http.get(`https://jsonplaceholder.typicode.com/users`);
+    return users;
   }
 }

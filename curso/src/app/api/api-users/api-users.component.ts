@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { PipeService } from 'src/app/main/pipe/pipe-services/pipe.service';
+import { ApiService } from '../services/api.service';
 
 
 @Component({
@@ -10,10 +11,10 @@ import { PipeService } from 'src/app/main/pipe/pipe-services/pipe.service';
 })
 export class ApiUsersComponent implements OnInit {
   localUser$!: Observable<Object | any>;
-  constructor(private pipeService: PipeService) { }
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.localUser$ = this.pipeService.getUsers();
+    this.localUser$ = this.apiService.getAllUsers();
   }
 
 }
