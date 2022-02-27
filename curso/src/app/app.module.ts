@@ -7,10 +7,10 @@ import { MainComponent } from './main/main.component';
 import { PipeComponent } from './main/pipe/pipe-comuns/pipe.component';
 import { PipeCustomsComponent } from './main/pipe/pipe-customs/pipe-customs.component';
 import { CustomPipe } from './main/pipe/pipe-customs/custom.pipe';
-import { ApiRealComponent } from './api-real/api-real.component';
+import { ApiRealComponent } from './api/api-real/api-real.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ApiUsersComponent } from './api-users/api-users/api-users.component';
 import { PipeAsyncComponent } from './main/pipe/pipe-async/pipe-async.component';
+import { ApiUsersComponent } from './api/api-users/api-users.component';
 
 
 
@@ -22,8 +22,8 @@ import { PipeAsyncComponent } from './main/pipe/pipe-async/pipe-async.component'
     PipeCustomsComponent,
     CustomPipe,
     ApiRealComponent,
-    ApiUsersComponent,
     PipeAsyncComponent,
+    ApiUsersComponent,
    
    
   ],

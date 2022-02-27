@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from './services/server.service';
+import { ApiService } from '../services/server.service';
 
 @Component({
   selector: 'app-api-real',

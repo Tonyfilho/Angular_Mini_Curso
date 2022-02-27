@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ApiRealComponent } from './api-real/api-real.component';
-import { ApiUsersComponent } from './api-users/api-users/api-users.component';
+import { ApiRealComponent } from './api/api-real/api-real.component';
+import { ApiUsersComponent } from './api/api-users/api-users.component';
 import { PipeAsyncComponent } from './main/pipe/pipe-async/pipe-async.component';
 import { PipeComponent } from './main/pipe/pipe-comuns/pipe.component';
 import { PipeCustomsComponent } from './main/pipe/pipe-customs/pipe-customs.component';
