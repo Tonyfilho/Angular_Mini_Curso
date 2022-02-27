@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { delay, from, Observable } from 'rxjs';
 
@@ -35,10 +36,15 @@ export class PipeService {
       age: new Date('10/10/2000'),
     },
   ];
-  constructor() {
+  constructor(private httpClient: HttpClient) {
   }
   getUsers(): Observable<Object> {
     const localusers = from(this.users);
     return localusers.pipe(delay(1000));
+  }
+
+  getUsersApi(){
+    const users = this.httpClient.get(`https://jsonplaceholder.typicode.com/users`);
+    return users;
   }
 }

@@ -10,6 +10,7 @@ import { CustomPipe } from './main/pipe/pipe-customs/custom.pipe';
 import { ApiRealComponent } from './api-real/api-real.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiUsersComponent } from './api-users/api-users/api-users.component';
+import { PipeAsyncComponent } from './main/pipe/pipe-async/pipe-async.component';
 
 
 
@@ -22,6 +23,7 @@ import { ApiUsersComponent } from './api-users/api-users/api-users.component';
     CustomPipe,
     ApiRealComponent,
     ApiUsersComponent,
+    PipeAsyncComponent,
    
    
   ],

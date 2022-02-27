@@ -8,7 +8,7 @@ import { ApiUsersService } from '../api-users.service';
   styleUrls: ['./api-users.component.css']
 })
 export class ApiUsersComponent implements OnInit {
-  localUser$!: Observable<any>;
+  localUser$!: Observable<Object | any>;
   constructor(private apiUserService: ApiUsersService) { }
 
   ngOnInit(): void {
