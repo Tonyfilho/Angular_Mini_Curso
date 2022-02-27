@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
-import { PipeService } from 'src/app/main/pipe/pipe-services/pipe.service';
+import { Observable } from 'rxjs';
 import { ApiService } from '../services/api.service';
 
 

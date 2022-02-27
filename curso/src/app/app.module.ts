@@ -3,13 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainComponent } from './main/main.component';
-import { PipeComponent } from './main/pipe/pipe-comuns/pipe.component';
-import { PipeCustomsComponent } from './main/pipe/pipe-customs/pipe-customs.component';
-import { CustomPipe } from './main/pipe/pipe-customs/custom.pipe';
+import { MainComponent } from './_main/main.component';
+import { PipeComponent } from './pipes/pipe-comuns/pipe.component';
+import { PipeCustomsComponent } from './pipes/pipe-customs/pipe-customs.component';
+import { CustomPipe } from './pipes/pipe-customs/custom.pipe';
 import { ApiRealComponent } from './api/api-real/api-real.component';
 import { HttpClientModule } from '@angular/common/http';
-import { PipeAsyncComponent } from './main/pipe/pipe-async/pipe-async.component';
+import { PipeAsyncComponent } from './pipes/pipe-async/pipe-async.component';
 import { ApiUsersComponent } from './api/api-users/api-users.component';
 
 
