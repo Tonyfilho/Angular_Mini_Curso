@@ -11,6 +11,7 @@ import { ApiRealComponent } from './api/api-real/api-real.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PipeAsyncComponent } from './pipes/pipe-async/pipe-async.component';
 import { ApiUsersComponent } from './api/api-users/api-users.component';
+import { HttpErrorHandlingComponent } from './http-error-handling/http-error-handling.component';
 
 
 
@@ -24,6 +25,7 @@ import { ApiUsersComponent } from './api/api-users/api-users.component';
     ApiRealComponent,
     PipeAsyncComponent,
     ApiUsersComponent,
+    HttpErrorHandlingComponent,
    
    
   ],
