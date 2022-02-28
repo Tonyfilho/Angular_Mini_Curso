@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PipeAsyncComponent } from './pipes/pipe-async/pipe-async.component';
 import { ApiUsersComponent } from './api/api-users/api-users.component';
 import { HttpErrorHandlingComponent } from './http-error-handling/http-error-handling.component';
+import { RoutingComponent } from './_routing/routing.component';
 
 
 
@@ -26,6 +27,7 @@ import { HttpErrorHandlingComponent } from './http-error-handling/http-error-han
     PipeAsyncComponent,
     ApiUsersComponent,
     HttpErrorHandlingComponent,
+    RoutingComponent,
    
    
   ],
