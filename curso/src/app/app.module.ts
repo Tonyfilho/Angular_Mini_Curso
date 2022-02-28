@@ -14,6 +14,8 @@ import { ApiUsersComponent } from './api/api-users/api-users.component';
 import { HttpErrorHandlingComponent } from './http-error-handling/http-error-handling.component';
 import { RoutingComponent } from './_routing/routing.component';
 import { UsersComponent } from './users/users/users.component';
+import { AboutComponent } from './users/about/about.component';
+import { ContactsComponent } from './users/contacts/contacts.component';
 
 
 
@@ -30,6 +32,8 @@ import { UsersComponent } from './users/users/users.component';
     HttpErrorHandlingComponent,
     RoutingComponent,
     UsersComponent,
+    AboutComponent,
+    ContactsComponent,
    
    
   ],
