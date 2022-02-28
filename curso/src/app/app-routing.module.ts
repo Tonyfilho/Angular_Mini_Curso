@@ -29,6 +29,7 @@ const routes: Routes = [
   {path: '', redirectTo:'users', pathMatch: 'full' }, // Define uma rota de start, Tem que pode pathMatch, como full
   {path: 'users', component: UsersComponent}, 
   {path: 'user/:id', component: UserComponent, children : [
+    {path: '', redirectTo:'address', pathMatch: 'full' },
     {path: 'address', component: UserAddressComponent},
     {path: 'company', component: UserCompanyComponent},
   ]}, 

@@ -19,14 +19,14 @@ export class UserComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    console.log(this.route.snapshot.params['id']); //pegando o paramentro
+    // console.log(this.route.snapshot.params['id']); //pegando o paramentro
     const id = this.route.snapshot.params['id'];
     this.userServices
       .getUserById(id)
       .subscribe({
         next: (user: any) => (this.localUser = user),
         error: (err) => (this.localError = err.message),
-        complete: () => {console.log('subscrition complete'), console.log(this.localUser)},
+        complete: () => {console.log('subscrition complete')},
       });
     
   }
