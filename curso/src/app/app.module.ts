@@ -16,6 +16,7 @@ import { RoutingComponent } from './_routing/routing.component';
 import { UsersComponent } from './users/users/users.component';
 import { AboutComponent } from './users/about/about.component';
 import { ContactsComponent } from './users/contacts/contacts.component';
+import { UserComponent } from './users/users/user/user.component';
 
 
 
@@ -34,6 +35,7 @@ import { ContactsComponent } from './users/contacts/contacts.component';
     UsersComponent,
     AboutComponent,
     ContactsComponent,
+    UserComponent,
    
    
   ],

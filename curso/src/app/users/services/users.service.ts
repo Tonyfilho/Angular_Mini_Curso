@@ -13,5 +13,9 @@ export class UsersService {
   getUsersApi(){
     const users = this.httpClient.get(`https://jsonplaceholder.typicode.com/users`);
     return users;
+  };
+  getUserById(id: number){
+    const user = this.httpClient.get(`https://jsonplaceholder.typicode.com/users/${id}`);
+    return user;
   }
 }
