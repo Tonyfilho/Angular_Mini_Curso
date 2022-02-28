@@ -8,6 +8,8 @@ import { PipeComponent } from './pipes/pipe-comuns/pipe.component';
 import { PipeCustomsComponent } from './pipes/pipe-customs/pipe-customs.component';
 import { AboutComponent } from './users/about/about.component';
 import { ContactsComponent } from './users/contacts/contacts.component';
+import { UserAddressComponent } from './users/users/user/user-address/user-address.component';
+import { UserCompanyComponent } from './users/users/user/user-company/user-company.component';
 import { UserComponent } from './users/users/user/user.component';
 import { UsersComponent } from './users/users/users.component';
 /**
@@ -26,7 +28,10 @@ import { UsersComponent } from './users/users/users.component';
 const routes: Routes = [
   {path: '', redirectTo:'users', pathMatch: 'full' }, // Define uma rota de start, Tem que pode pathMatch, como full
   {path: 'users', component: UsersComponent}, 
-  {path: 'user/:id', component: UserComponent}, 
+  {path: 'user/:id', component: UserComponent, children : [
+    {path: 'address', component: UserAddressComponent},
+    {path: 'company', component: UserCompanyComponent},
+  ]}, 
   {path: 'about', component: AboutComponent},
   {path: 'contacts', component: ContactsComponent}, 
   {path: '**', redirectTo: 'users'}, //Protege contra links desconhecidos

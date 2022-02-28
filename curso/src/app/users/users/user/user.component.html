@@ -1,26 +1,24 @@
 <table class="table table-striped table-hover">
     <thead>
         <tr>
+          <th scope="col">Id</th>
           <th scope="col">Name</th>
           <th scope="col">NickName</th>
-          <th scope="col">Email</th>
-          <th scope="col">Street</th>
-          <!-- <th scope="row"></th> -->
-          <th scope="col">Suite</th>
-          <th scope="col">Zip</th>
-          <th scope="col">Phone</th>
+          <th scope="col">Email</th>    
+        
         </tr>
       </thead>
       <tbody>
         <tr>
           
-          <td>{{ localUser?.name }}</td>
+          <td>{{ localUser?.id }}</td>
+          <td> {{ localUser?.name }}</td>
           <td> {{ localUser?.username }}</td>
           <td> {{ localUser?.email }} </td>
-          <td> {{ localUser?.address?.street }} </td>
+          <!-- <td> {{ localUser?.address?.street }} </td>
           <td> {{ localUser?.address?.suite }} </td>
           <td> {{ localUser?.address?.zipcode }} </td>
-          <td> {{ localUser?.phone }} </td>
+          <td> {{ localUser?.phone }} </td> -->
         </tr>        
       </tbody>
   </table>

@@ -17,6 +17,8 @@ import { UsersComponent } from './users/users/users.component';
 import { AboutComponent } from './users/about/about.component';
 import { ContactsComponent } from './users/contacts/contacts.component';
 import { UserComponent } from './users/users/user/user.component';
+import { UserCompanyComponent } from './users/users/user/user-company/user-company.component';
+import { UserAddressComponent } from './users/users/user/user-address/user-address.component';
 
 
 
@@ -36,6 +38,8 @@ import { UserComponent } from './users/users/user/user.component';
     AboutComponent,
     ContactsComponent,
     UserComponent,
+    UserCompanyComponent,
+    UserAddressComponent,
    
    
   ],
