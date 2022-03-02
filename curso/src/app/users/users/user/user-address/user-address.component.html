@@ -1,1 +1,18 @@
-<p>user-address works!</p>
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Street</th>
+      <th scope="col">Suite</th>
+      <th scope="col">City</th>
+      <th scope="col">Zipcode</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ localUserAddress?.street }}</td>
+      <td>{{ localUserAddress?.suite }}</td>
+      <td>{{ localUserAddress?.city }}</td>
+      <td>{{ localUserAddress?.zipcode }}</td>
+    </tr>
+  </tbody>
+</table>
