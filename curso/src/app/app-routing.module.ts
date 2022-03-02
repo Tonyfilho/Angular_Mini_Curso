@@ -13,13 +13,14 @@ import { UserAddressComponent } from './users/users/user/user-address/user-addre
 import { UserCompanyComponent } from './users/users/user/user-company/user-company.component';
 import { UserComponent } from './users/users/user/user.component';
 import { UsersComponent } from './users/users/users.component';
+import { AdminAuthGuard } from './_services/auth/admin-auth.guard';
 import { AuthGuard } from './_services/auth/auth.guard';
 /**
- * 1º nav pertence a aula routing do ROUTING Compoment 
+ * 1º nav pertence a aula routing do ROUTING Compoment
  */
 // const routes: Routes = [
 //   {path: '', redirectTo:'apiUserPipeAsync', pathMatch: 'full' }, // Define uma rota de start, Tem que pode pathMatch, como full
-//   {path: 'pipesComuns', component: PipeComponent}, 
+//   {path: 'pipesComuns', component: PipeComponent},
 //   {path: 'pipeCustoms', component: PipeCustomsComponent},
 //   {path: 'apiReal', component: ApiRealComponent},
 //   {path: 'apiUser', component: ApiUsersComponent},
@@ -28,21 +29,26 @@ import { AuthGuard } from './_services/auth/auth.guard';
 //   {path: '**', redirectTo: 'apiUserPipeAsync'}, //Protege contra links desconhecidos
 // ];
 const routes: Routes = [
-  {path: '', redirectTo:'home', pathMatch: 'full' }, // Define uma rota de start, Tem que pode pathMatch, como full
-  {path: 'home', component: HomeComponent}, 
-  {path: 'users', component: UsersComponent, canActivate: [AuthGuard]}, 
-  {path: 'user/:id', component: UserComponent, children : [
-    {path: '', redirectTo:'address', pathMatch: 'full' },
-    {path: 'address', component: UserAddressComponent},
-    {path: 'company', component: UserCompanyComponent},
-  ]}, 
-  {path: 'about', component: AboutComponent},
-  {path: 'contacts', component: ContactsComponent}, 
-  {path: '**', redirectTo: 'home'}, //Protege contra links desconhecidos
+  { path: '', redirectTo: 'home', pathMatch: 'full' }, // Define uma rota de start, Tem que pode pathMatch, como full
+  { path: 'home', component: HomeComponent },
+  { path: 'users', component: UsersComponent, canActivate: [AuthGuard] },
+  {
+    path: 'user/:id',
+    component: UserComponent,
+    canActivateChild: [AdminAuthGuard],
+    children: [
+      // {path: '', redirectTo:'address', pathMatch: 'full' },
+      { path: 'address', component: UserAddressComponent },
+      { path: 'company', component: UserCompanyComponent },
+    ],
+  },
+  { path: 'about', component: AboutComponent },
+  { path: 'contacts', component: ContactsComponent },
+  { path: '**', redirectTo: 'home' }, //Protege contra links desconhecidos
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

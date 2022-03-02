@@ -21,6 +21,7 @@ import { UserCompanyComponent } from './users/users/user/user-company/user-compa
 import { UserAddressComponent } from './users/users/user/user-address/user-address.component';
 import { HomeComponent } from './home/home.component';
 import { ModalDirective } from './_services/modal-directives/modal.directive';
+import { AdminAuthGuard } from './_services/auth/admin-auth.guard';
 
 
 

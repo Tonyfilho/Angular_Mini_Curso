@@ -26,7 +26,7 @@ export class UserAddressComponent implements OnInit, AfterViewInit {
         this.localUserAddress = userAddress.address;
       },
       error: (err: any) => console.error(err),
-      complete: () => console.log('completouuuuu'),
+      // complete: () => console.log('completouuuuu'),
     });
   }
 }

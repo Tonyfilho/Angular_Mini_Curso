@@ -20,7 +20,7 @@ export class UserCompanyComponent implements OnInit, AfterViewInit {
       .subscribe({
         next: (data: any) => {this.localUserCompany = data.company},
         error: (err) => console.error(err),
-        complete: () => console.log('completou'),
+        // complete: () => console.log('completou'),
       });
   }
 }

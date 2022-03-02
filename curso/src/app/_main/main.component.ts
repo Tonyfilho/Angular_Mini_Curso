@@ -12,7 +12,7 @@ export class MainComponent implements OnInit {
 
   constructor(private logginService: LogginService) {
     this.logginService.serviceLoggedRetorno.subscribe((isLoggin) => {
-      (this.localLoggin = isLoggin), console.log(this.localLoggin);
+      this.localLoggin = isLoggin;
     });
   }
 
