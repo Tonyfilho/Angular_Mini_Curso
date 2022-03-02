@@ -20,6 +20,7 @@ import { UserComponent } from './users/users/user/user.component';
 import { UserCompanyComponent } from './users/users/user/user-company/user-company.component';
 import { UserAddressComponent } from './users/users/user/user-address/user-address.component';
 import { HomeComponent } from './home/home.component';
+import { ModalDirective } from './_services/modal-directives/modal.directive';
 
 
 
@@ -42,6 +43,7 @@ import { HomeComponent } from './home/home.component';
     UserCompanyComponent,
     UserAddressComponent,
     HomeComponent,
+    ModalDirective,
    
    
   ],

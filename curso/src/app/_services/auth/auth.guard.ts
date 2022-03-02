@@ -12,6 +12,7 @@ import { LogginService } from '../loggin-services/loggin.service';
   providedIn: 'root',
 })
 export class AuthGuard implements CanActivate {
+  logged: boolean = false;
   constructor(private logginService: LogginService) {}
   canActivate(
     route: ActivatedRouteSnapshot,
@@ -21,7 +22,7 @@ export class AuthGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    const isLoggiin = this.logginService.isAutenticate ? true : false;
-    return isLoggiin;
+    this.logginService.serviceLoggedRetorno.subscribe(isLoggin => this.logged = isLoggin)
+    return this.logged;
   }
 }
