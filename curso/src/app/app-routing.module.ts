@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ApiRealComponent } from './api/api-real/api-real.component';
 import { ApiUsersComponent } from './api/api-users/api-users.component';
+import { HomeComponent } from './home/home.component';
 import { HttpErrorHandlingComponent } from './http-error-handling/http-error-handling.component';
 import { PipeAsyncComponent } from './pipes/pipe-async/pipe-async.component';
 import { PipeComponent } from './pipes/pipe-comuns/pipe.component';
@@ -26,7 +27,8 @@ import { UsersComponent } from './users/users/users.component';
 //   {path: '**', redirectTo: 'apiUserPipeAsync'}, //Protege contra links desconhecidos
 // ];
 const routes: Routes = [
-  {path: '', redirectTo:'users', pathMatch: 'full' }, // Define uma rota de start, Tem que pode pathMatch, como full
+  {path: '', redirectTo:'home', pathMatch: 'full' }, // Define uma rota de start, Tem que pode pathMatch, como full
+  {path: 'home', component: HomeComponent}, 
   {path: 'users', component: UsersComponent}, 
   {path: 'user/:id', component: UserComponent, children : [
     {path: '', redirectTo:'address', pathMatch: 'full' },
@@ -35,7 +37,7 @@ const routes: Routes = [
   ]}, 
   {path: 'about', component: AboutComponent},
   {path: 'contacts', component: ContactsComponent}, 
-  {path: '**', redirectTo: 'users'}, //Protege contra links desconhecidos
+  {path: '**', redirectTo: 'home'}, //Protege contra links desconhecidos
 ];
 
 @NgModule({
