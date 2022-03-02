@@ -13,6 +13,7 @@ import { UserAddressComponent } from './users/users/user/user-address/user-addre
 import { UserCompanyComponent } from './users/users/user/user-company/user-company.component';
 import { UserComponent } from './users/users/user/user.component';
 import { UsersComponent } from './users/users/users.component';
+import { AuthGuard } from './_services/auth/auth.guard';
 /**
  * 1º nav pertence a aula routing do ROUTING Compoment 
  */
@@ -29,7 +30,7 @@ import { UsersComponent } from './users/users/users.component';
 const routes: Routes = [
   {path: '', redirectTo:'home', pathMatch: 'full' }, // Define uma rota de start, Tem que pode pathMatch, como full
   {path: 'home', component: HomeComponent}, 
-  {path: 'users', component: UsersComponent}, 
+  {path: 'users', component: UsersComponent, canActivate: [AuthGuard]}, 
   {path: 'user/:id', component: UserComponent, children : [
     {path: '', redirectTo:'address', pathMatch: 'full' },
     {path: 'address', component: UserAddressComponent},
