@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
-import { UsersService } from 'src/app/users/services/users.service';
+import { UsersService } from 'src/app/users/servicesUsers/users.service';
 
 @Component({
   selector: 'app-user-company',
