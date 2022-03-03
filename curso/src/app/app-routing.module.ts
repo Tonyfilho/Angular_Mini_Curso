@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ApiRealComponent } from './api/api-real/api-real.component';
-import { ApiUsersComponent } from './api/api-users/api-users.component';
+import { ApiRealComponent } from './dummy/api-real/api-real.component';
+import { ApiUsersComponent } from './dummy/api-users/api-users.component';
 import { HomeComponent } from './home/home.component';
-import { HttpErrorHandlingComponent } from './http-error-handling/http-error-handling.component';
-import { PipeAsyncComponent } from './pipes/pipe-async/pipe-async.component';
-import { PipeComponent } from './pipes/pipe-comuns/pipe.component';
-import { PipeCustomsComponent } from './pipes/pipe-customs/pipe-customs.component';
+import { HttpErrorHandlingComponent } from './dummy/http-error-handling/http-error-handling.component';
+import { PipeAsyncComponent } from './dummy/pipe-async/pipe-async.component';
+import { PipeComponent } from './dummy/pipe-comuns/pipe.component';
+import { PipeCustomsComponent } from './dummy/pipe-customs/pipe-customs.component';
 import { AboutComponent } from './users/about/about.component';
 import { ContactsComponent } from './users/contacts/contacts.component';
 import { UserAddressComponent } from './users/users/user/user-address/user-address.component';
