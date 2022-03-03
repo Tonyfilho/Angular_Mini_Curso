@@ -19,7 +19,7 @@
 
 <!-- Tables -->
 <div>
-  <ul class="nav nav-tabs">
+  <ul class="nav nav-tabs" (click)="openPopup()">
     <li class="nav-item">
       <a class="nav-link active" aria-current="page" routerLink="address"
         >Address
@@ -33,4 +33,29 @@
     </li>
   </ul>
   <router-outlet></router-outlet>
+</div>
+
+<!-- Modal -->
+
+<div
+class="modal"
+tabindex="-1"
+role="dialog"
+[ngStyle]="{ display: displayStyle }" *ngIf="(isModalWorking &&  !localIsAdmin) || localIsError"
+>
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title">Angular Curse</h4>
+    </div>
+    <div class="modal-body">
+      <p>{{ modalMessage }}</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" (click)="closePopup()">
+        Close
+      </button>
+    </div>
+  </div>
+</div>
 </div>

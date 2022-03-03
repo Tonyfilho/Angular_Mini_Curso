@@ -9,7 +9,7 @@ import { LogginService } from '../loggin-services/loggin.service';
 export class AdminAuthGuard implements CanActivateChild {
   isLocalAdmin: boolean = false;
   constructor(private logginService: LogginService){
-    this.logginService.serviceUserAdmindRetorno.subscribe(isAdmin => {this.isLocalAdmin = isAdmin , console.log(this.isLocalAdmin, 'aqui AdminAuth')})
+    this.logginService.serviceUserAdmindRetorno.subscribe(isAdmin => {this.isLocalAdmin = isAdmin })
   }
   canActivateChild(
     childRoute: ActivatedRouteSnapshot,
