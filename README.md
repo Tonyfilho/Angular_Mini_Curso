@@ -11,6 +11,12 @@ Obs: Diretorio Dummy contem outros diretorios : [_routing, api,http-error-handli
 Diretorios funcionais são: [-main,_services,home,users.... e todas as subpastas dentro de Users, além dos diretorios comum do angular]
 
 
+Im studing the main tools of Angular. Consumes an API where we do API Consumption, Routes, ActiveRouting, CanDeactivateRouteGuard, Modals, Forms etc: Directory _services/auth: we have Auths guards, and admin guards , child routes and protected routes. Directory _services/loggin-service: we have the Observable service that will be activated to confirm whether or not you are logged in. If you are not Admin. Users directory and its subdirectories is where the Api is subscribed to.
+
+Note: Dummy directory contains other directories: [_routing, api, http-error-handling, pipes], they are not load the project, they serve to test some logics and exercises.
+
+Functional directories are: [-main,_services,home,users.... and all subfolders under Users, in addition to the common angular directories]
+
 iniciar o projeto depois do clone:
 
 npm i,
