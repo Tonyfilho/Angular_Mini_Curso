@@ -6,9 +6,9 @@ Diretorio _services/auth: temos o Auths guards, e o admin guards , rotas filhas 
 Diretorio _services/loggin-service: temos o serviço de Observable que será acionado para confirmar se está ou não logado  Se é o não Admin.
 Diretorio users e seus subdiretorios é onde a Api é subscrita.
 
-Obs: Diretorios Dummy: [_routing, api,http-error-handling, pipes], não carregão o projeto, servem para testar algumas logicas.
+Obs: Diretorio Dummy contem outros diretorios : [_routing, api,http-error-handling, pipes], não são carregão o projeto, servem para testar algumas logicas e exercicos.
 
-Diretorios funcionais são: [-main,_services,home,users.... e todas as subpastas, além dos diretorios comum do angular]
+Diretorios funcionais são: [-main,_services,home,users.... e todas as subpastas dentro de Users, além dos diretorios comum do angular]
 
 
 iniciar o projeto depois do clone:
@@ -18,4 +18,5 @@ npm i,
 startar o projeto
 
 ng s -o
+
 
