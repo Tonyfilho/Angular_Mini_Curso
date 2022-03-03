@@ -1,4 +1,7 @@
-<div class="container" *ngIf="localUsers.length > 0; else templateErro">
+<div class="container" *ngIf="localUsers.length > 0; else templateErro">   
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end btn-lg">    
+    <button class="btn btn-primary" type="button" routerLink="/addUser" [disabled]="!localIsAdmin">AddUser</button>
+  </div>
   <table class="table">
     <thead>
       <tr>

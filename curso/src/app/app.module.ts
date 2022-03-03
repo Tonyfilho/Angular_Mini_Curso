@@ -22,6 +22,7 @@ import { UserAddressComponent } from './users/users/user/user-address/user-addre
 import { HomeComponent } from './home/home.component';
 import { ModalDirective } from './_services/modal-directives/modal.directive';
 import { AdminAuthGuard } from './_services/auth/admin-auth.guard';
+import { AddUserComponent } from './users/users/add-user/add-user.component';
 
 
 
@@ -45,6 +46,7 @@ import { AdminAuthGuard } from './_services/auth/admin-auth.guard';
     UserAddressComponent,
     HomeComponent,
     ModalDirective,
+    AddUserComponent,
    
    
   ],

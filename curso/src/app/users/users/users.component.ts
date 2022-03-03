@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { LogginService } from 'src/app/_services/loggin-services/loggin.service';
 import { UsersService } from '../servicesUsers/users.service';
 
 @Component({
@@ -10,7 +11,9 @@ import { UsersService } from '../servicesUsers/users.service';
 export class UsersComponent implements OnInit {
   localUsers: Array<Object | any> = [];
   localError: string = 'Louding...';
-  constructor(private userService: UsersService) {
+  localIsAdmin: boolean = false;
+  constructor(private userService: UsersService, private logginService: LogginService) {
+    this.logginService.serviceUserAdmindRetorno.subscribe(isAdmin => this.localIsAdmin = isAdmin)
     this.userService
       .getUsersApi()
       .subscribe({

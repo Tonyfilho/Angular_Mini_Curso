@@ -18,7 +18,7 @@ export class LogginService {
   serviceUserAdmindRetorno = this.userAdmin.asObservable();
   constructor() { 
     this.isLogged(true); //passando se estou ou não logado, como se estivesse vindo do backend
-    this.isAdmin(false); //passando se é ou não admin, como se estivesse vindo do backend
+    this.isAdmin(true); //passando se é ou não admin, como se estivesse vindo do backend
   }
 
 
