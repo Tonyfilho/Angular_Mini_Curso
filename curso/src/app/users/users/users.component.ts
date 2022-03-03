@@ -19,7 +19,7 @@ export class UsersComponent implements OnInit {
       .subscribe({
         next: ((next: any) => { this.localUsers = next}),
         error: (err: Error) => (this.localError = err.message),
-        complete: () => console.log('response complete'),
+        complete: () => console.log('response complete', console.log(this.localUsers[0])),
       });
   }
 
