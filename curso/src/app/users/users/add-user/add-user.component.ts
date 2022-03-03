@@ -1,6 +1,6 @@
 import { UserAddClass } from './../../../../assets/userClass/user-class.component';
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-user',
@@ -27,8 +27,16 @@ export class AddUserComponent implements OnInit {
       bs: '',
     },
   };
-  userFormControl:FormControl = new FormControl();
-  constructor() {}
+  // userFormControl:FormControl = new FormControl();
+  userFormBuilder!:FormGroup;
+  constructor(private formBuilder: FormBuilder) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.userFormBuilder = this.formBuilder.group({
+      name: [null, Validators.required, ],
+      username: [null, Validators.required, ],
+      phone: [null, Validators.required, ],
+      email: [null, Validators.required],
+    })
+  }
 }
