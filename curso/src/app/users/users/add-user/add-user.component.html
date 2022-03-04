@@ -3,6 +3,7 @@
     class="row g-3 needs-validation"
     novalidate
     [formGroup]="userFormBuilder"
+    (ngSubmit)="sendUserForm()"
   >
     <div class="row localGroupAddress">
       <div class="col-md-6 position-relative">
@@ -36,43 +37,44 @@
       </div>
     </div>
 
-    <!-- FormqControGroup Address -->
-    <div class="row">
+    <!--   Group Address -->
+    <div class="row" formGroupName="address">
       <div class="col-md-3 position-relative">
         <label class="form-label">Street</label>
-        <input type="text" class="form-control" />
+        <input type="text" class="form-control" formControlName="street"  />
         <div class="invalid-tooltip"></div>
       </div>
       <div class="col-md-3 position-relative">
         <label class="form-label">Suite</label>
-        <input type="text" class="form-control" />
+        <input type="text" class="form-control" formControlName="suite" />
         <div class="invalid-tooltip"></div>
       </div>
       <div class="col-md-3 position-relative">
         <label class="form-label">City</label>
-        <input type="text" class="form-control" />
+        <input type="text" class="form-control" formControlName="city" />
         <div class="invalid-tooltip"></div>
       </div>
       <div class="col-md-3 position-relative">
         <label class="form-label">ZipeCode</label>
-        <input type="text" class="form-control" />
+        <input type="text" class="form-control" formControlName="zipecode" />
         <div class="invalid-tooltip"></div>
       </div>
     </div>
-    <div class="row">
+    <!-- Group Company -->
+    <div class="row" formGroupName="company">
       <div class="col-md-4 position-relative">
         <label class="form-label">Company Name</label>
-        <input type="text" class="form-control" />
+        <input type="text" class="form-control" formControlName="name">
         <div class="invalid-tooltip"></div>
       </div>
       <div class="col-md-4 position-relative">
         <label class="form-label">Company CatchPhrase</label>
-        <input type="text" class="form-control" />
+        <input type="text" class="form-control" formControlName="catchphrase" />
         <div class="invalid-tooltip"></div>
       </div>
       <div class="col-md-4 position-relative">
         <label class="form-label">Company Bs</label>
-        <input type="text" class="form-control" />
+        <input type="text" class="form-control" formControlName="bs"/>
         <div class="invalid-tooltip"></div>
       </div>
       <div class="col-md-8 position-relative"></div>
