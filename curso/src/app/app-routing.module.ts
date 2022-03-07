@@ -13,8 +13,8 @@ import { UserAddressComponent } from './users/users/user/user-address/user-addre
 import { UserCompanyComponent } from './users/users/user/user-company/user-company.component';
 import { UserComponent } from './users/users/user/user.component';
 import { UsersComponent } from './users/users/users.component';
-import { AdminAuthGuard } from './_services/auth/admin-auth.guard';
-import { AuthGuard } from './_services/auth/auth.guard';
+import { AdminAuthGuard } from './_services/guards/auth/admin-auth.guard';
+import { AuthGuard } from './_services/guards/auth/auth.guard';
 import { AddUserComponent } from './users/users/add-user/add-user.component';
 
 

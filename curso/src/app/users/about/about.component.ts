@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-
+  CanDeactivate:string = `CanDeactivate Route Guard`;
   constructor() { }
 
   ngOnInit(): void {
