@@ -20,10 +20,10 @@ import { UserComponent } from './users/users/user/user.component';
 import { UserCompanyComponent } from './users/users/user/user-company/user-company.component';
 import { UserAddressComponent } from './users/users/user/user-address/user-address.component';
 import { HomeComponent } from './home/home.component';
-import { ModalDirective } from './_services/modal-services/modal.directive';
 import { AdminAuthGuard } from './_services/auth/admin-auth.guard';
 import { AddUserComponent } from './users/users/add-user/add-user.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ModalServicesComponent } from './_services/modal-services/modal-services.component';
 
 
 
@@ -45,9 +45,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     UserComponent,
     UserCompanyComponent,
     UserAddressComponent,
-    HomeComponent,
-    ModalDirective,
+    HomeComponent,    
     AddUserComponent,
+    ModalServicesComponent,
    
    
   ],

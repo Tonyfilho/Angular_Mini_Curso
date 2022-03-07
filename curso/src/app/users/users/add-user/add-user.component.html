@@ -194,11 +194,6 @@
     </div>
   </form>
 </div>
-<!-- ModalService -->
-<div
-  class="container"
-  appModal
-  [showDisplayModal]="this.showDisplayModal"
-  [localTitle]="this.modalTitle"
-  [localMessage]="this.modalMessage"
-></div>
+<!-- ModalService onde passamos via @Input() os paramentros das vars no modal -->
+
+<app-modal-services [showDisplayModal]="showDisplayModal" [localMessage]="modalMessage" [localTitle]="modalTitle"></app-modal-services>

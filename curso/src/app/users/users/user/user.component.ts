@@ -48,6 +48,6 @@ export class UserComponent implements OnInit {
   }
   closePopup(){
     this.modalMessage = '', this.isModalWorking = false;
-    this.displayStyle = 'nome';
+    this.displayStyle = 'none';
   }
 }

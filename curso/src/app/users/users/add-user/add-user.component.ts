@@ -1,8 +1,9 @@
 import { UsersService } from 'src/app/users/servicesUsers/users.service';
 import { UserAddClass } from './../../../../assets/userClass/user-class.component';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { map, Subscription } from 'rxjs';
+import { ModalServicesComponent } from 'src/app/_services/modal-services/modal-services.component';
 
 @Component({
   selector: 'app-add-user',
@@ -19,7 +20,8 @@ export class AddUserComponent implements OnInit {
   isSubmit: boolean = false;
   constructor(
     private formBuilder: FormBuilder,
-    private userService: UsersService
+    private userService: UsersService,
+   
   ) {}
 
   ngOnInit(): void {
@@ -119,7 +121,7 @@ export class AddUserComponent implements OnInit {
     // console.log(`uCONTROLS company`, this.userFormBuilder.controls['company']);
     // console.log(`get company`, this.userFormBuilder.get('company.bs'))
   }
-
+  
   sendUserForm() {
     this.userService.postUser(this.userFormBuilder.value).subscribe({
       next: (result) => {
@@ -128,14 +130,15 @@ export class AddUserComponent implements OnInit {
           this.isSubmit = true;
           this.modalMessage = 'Formulario Submetido com Sucess';
           this.modalTitle = 'Success';
-          this.openPopup();
-          // this.resetForm();
+           this.openPopup();
+           this.resetForm();
         }
       },
       error: (err) => {
         this.hasError = true;
         this.isSubmit = false;
         this.modalMessage = err.message;
+        this.openPopup();
       },
       complete: () => {},
     });
@@ -143,7 +146,10 @@ export class AddUserComponent implements OnInit {
   resetForm() {
     this.userFormBuilder.reset();
   }
-
+  
+  /**
+   * Para que o modal service funcione, tem que termos estes 2 metodos de abrir e fechar
+   */
   openPopup() {
     this.showDisplayModal = 'block';
   }

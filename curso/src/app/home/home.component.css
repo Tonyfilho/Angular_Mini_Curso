@@ -1,0 +1,10 @@
+.main{
+    width: 119.5em !important; 
+    height: 52.5em !important;   
+    background-color: rgb(13, 13, 233);
+}
+.image {
+   margin: auto;
+   max-width: 45em !important;
+   /* max-height: 25em !important; */
+}
