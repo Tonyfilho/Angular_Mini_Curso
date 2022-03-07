@@ -172,16 +172,15 @@
         <div class="invalid-tooltip"></div>
       </div>
       <div
-      class="alert alert-danger"
-      role="alert"
-      *ngIf="
+        class="alert alert-danger"
+        role="alert"
+        *ngIf="
   this.userFormBuilder.get(['company','bs'])?.touched && 
     this.userFormBuilder.get('company.bs')?.errors?.['required']
   "
-    >
-      Please fixing the company bs field Mix 1 letters Max 20
-      letters
-    </div>
+      >
+        Please fixing the company bs field Mix 1 letters Max 20 letters
+      </div>
     </div>
     <div class="col-2">
       <button class="btn btn-primary" [disabled]="!this.userFormBuilder.valid">
@@ -195,3 +194,11 @@
     </div>
   </form>
 </div>
+<!-- ModalService -->
+<div
+  class="container"
+  appModal
+  [showDisplayModal]="this.showDisplayModal"
+  [localTitle]="this.modalTitle"
+  [localMessage]="this.modalMessage"
+></div>

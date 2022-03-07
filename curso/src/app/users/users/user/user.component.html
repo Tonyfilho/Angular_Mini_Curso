@@ -12,7 +12,7 @@
       <td>{{ localUser?.id }}</td>
       <td>{{ localUser?.name }}</td>
       <td>{{ localUser?.username }}</td>
-      <td>{{ localUser?.email }}</td>     
+      <td>{{ localUser?.email }}</td>
     </tr>
   </tbody>
 </table>
@@ -27,9 +27,7 @@
     </li>
 
     <li class="nav-item">
-      <a class="nav-link " aria-current="page" routerLink="company"
-        >Company
-      </a>
+      <a class="nav-link" aria-current="page" routerLink="company">Company </a>
     </li>
   </ul>
   <router-outlet></router-outlet>
@@ -38,24 +36,25 @@
 <!-- Modal -->
 
 <div
-class="modal"
-tabindex="-1"
-role="dialog"
-[ngStyle]="{ display: displayStyle }" *ngIf="(isModalWorking &&  !localIsAdmin) || localIsError"
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{ display: displayStyle }"
+  *ngIf="(isModalWorking && !localIsAdmin) || localIsError"
 >
-<div class="modal-dialog" role="document">
-  <div class="modal-content">
-    <div class="modal-header">
-      <h4 class="modal-title">Angular Curse</h4>
-    </div>
-    <div class="modal-body">
-      <p>{{ modalMessage }}</p>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-danger" (click)="closePopup()">
-        Close
-      </button>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Angular Curse</h4>
+      </div>
+      <div class="modal-body">
+        <p>{{ modalMessage }}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" (click)="closePopup()">
+          Close
+        </button>
+      </div>
     </div>
   </div>
-</div>
 </div>
