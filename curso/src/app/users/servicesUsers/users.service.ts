@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, take } from 'rxjs';
 import { UserAddClass } from 'src/assets/userClass/user-class.component';
 
 @Injectable({
@@ -16,13 +16,13 @@ export class UsersService {
     const users = this.httpClient.get(
       `https://jsonplaceholder.typicode.com/users`
     );
-    return users;
+    return users.pipe(take(1));
   }
   getUserById(id: number) {
     const user = this.httpClient.get(
       `https://jsonplaceholder.typicode.com/users/${id}`
     );
-    return user;
+    return user.pipe(take(1));
   }
 
   getId(id: number): void {
@@ -34,6 +34,6 @@ export class UsersService {
     return this.httpClient.post(
       `https://httpbin.org/post`,
       JSON.stringify(user)
-    ); //JSON é uma API de JSON q o browser vai usar, o stringify é o metodo de conversão de Objeto JS / JSON.
+    ).pipe(take(1)); //JSON é uma API de JSON q o browser vai usar, o stringify é o metodo de conversão de Objeto JS / JSON.
   }
 }
