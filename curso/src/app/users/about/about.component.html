@@ -1,10 +1,19 @@
-<div class="container row">
-  <h2>
-    Aqui faremos todos os serviços ou componente que usamos neste curso:
-  </h2>
-</div>
-<div class="container">
-  <div class="container">
-    <p>{{ CanDeactivate }}</p>
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">ABOUT</a>
   </div>
+  <small class="container-fluid">
+    Aqui faremos todos os serviços ou componentes que usamos neste curso, muitos ainda não escritos:
+  </small>
+</nav>
+<div class="container row">    
+  <header class="container">
+    
+    <span class="d-block p-2 bg-primary text-white"> Diretório _Services: {{ service }}</span>
+    <span class="d-block p-2 bg-dark text-white"> Diretório  AuthGuard: {{ authGuard }}</span>
+    <span class="d-block p-2 bg-primary text-white" > Diretório AuthAdminGuard: {{  authAdminGuard  }}</span>
+    <span class="d-block p-2 bg-dark text-white"> Diretório  unSaved: {{ unSaved }}</span>
+  </header>
 </div>
+
+

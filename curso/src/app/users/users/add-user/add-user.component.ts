@@ -1,3 +1,4 @@
+import { ICanComponentLeave } from './../../../_services/guards/unsaved/unsaved-changes.guard';
 import { UsersService } from 'src/app/users/servicesUsers/users.service';
 import { UserAddClass } from './../../../../assets/userClass/user-class.component';
 import { Component, OnInit, AfterViewInit } from '@angular/core';
@@ -10,7 +11,7 @@ import { ModalServicesComponent } from 'src/app/_services/modal-services/modal-s
   templateUrl: './add-user.component.html',
   styleUrls: ['./add-user.component.css'],
 })
-export class AddUserComponent implements OnInit {
+export class AddUserComponent implements OnInit, ICanComponentLeave {
   showDisplayModal: string = ''; // var do modalService
   modalMessage:string = ''; // var do modalService
   modalTitle:string = ''; // var do modalService
@@ -23,12 +24,18 @@ export class AddUserComponent implements OnInit {
     private userService: UsersService,
    
   ) {}
+  
 
   ngOnInit(): void {
     /**
      * Obs: Caso o validators for mais de 1, tem que por em uma array
      */
-    this.userFormBuilder = this.formBuilder.group({
+    /**
+     * para pegarmos os erros podemos usar o CONTROLS ou o GET, no caso do get passamos nó do objeto.
+     * console.log(`uCONTROLS company`, this.userFormBuilder.controls['company']);
+     * console.log(`get company`, this.userFormBuilder.get('company.bs'))
+     */     
+        this.userFormBuilder = this.formBuilder.group({
       name: [
         null,
         [
@@ -115,11 +122,15 @@ export class AddUserComponent implements OnInit {
         ],
       }),
     });
-    /**
-     * para pegarmos os erros podemos usar o CONTROLS ou o GET, no caso do get passamos nó do objeto.
-     */
-    // console.log(`uCONTROLS company`, this.userFormBuilder.controls['company']);
-    // console.log(`get company`, this.userFormBuilder.get('company.bs'))
+    
+  }
+  /**So precisamos consumir este metodo para q o CanDeactivate funcione */
+  canLeave():boolean {
+    console.log('dentro do canLeave')
+    if(this.userFormBuilder.dirty) {
+      return window.confirm(`You have some unsaved changes. Are you sure you want to leave`);
+    }
+    return true;
   }
   
   sendUserForm() {

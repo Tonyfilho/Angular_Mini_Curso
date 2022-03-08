@@ -20,10 +20,11 @@ import { UserComponent } from './users/users/user/user.component';
 import { UserCompanyComponent } from './users/users/user/user-company/user-company.component';
 import { UserAddressComponent } from './users/users/user/user-address/user-address.component';
 import { HomeComponent } from './home/home.component';
-import { AdminAuthGuard } from './_services/guards/auth/admin-auth.guard';
 import { AddUserComponent } from './users/users/add-user/add-user.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ModalServicesComponent } from './_services/modal-services/modal-services.component';
+import { UnSavedChangesGuard } from './_services/guards/unsaved/unsaved-changes.guard';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -55,10 +56,11 @@ import { ModalServicesComponent } from './_services/modal-services/modal-service
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule,
-    
+    ReactiveFormsModule,   
   ],
-  providers: [],
+    
+  
+  providers: [UnSavedChangesGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -16,6 +16,7 @@ import { UsersComponent } from './users/users/users.component';
 import { AdminAuthGuard } from './_services/guards/auth/admin-auth.guard';
 import { AuthGuard } from './_services/guards/auth/auth.guard';
 import { AddUserComponent } from './users/users/add-user/add-user.component';
+import { UnSavedChangesGuard } from './_services/guards/unsaved/unsaved-changes.guard';
 
 
 const routes: Routes = [
@@ -32,7 +33,7 @@ const routes: Routes = [
       { path: 'company', component: UserCompanyComponent },
     ],
   },
-  { path: 'addUser', component: AddUserComponent ,  canActivate: [AdminAuthGuard]},
+  { path: 'addUser', component: AddUserComponent ,  canActivate: [AdminAuthGuard], canDeactivate: [UnSavedChangesGuard]},
   { path: 'about', component: AboutComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: '**', redirectTo: 'home' }, //Protege contra links desconhecidos
